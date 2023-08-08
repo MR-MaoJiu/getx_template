@@ -1,0 +1,5 @@
+@import
+class @controller extends GetxController with StateMixin {
+//自己去定义模板
+
+}

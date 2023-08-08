@@ -24,16 +24,9 @@
     * controller：负责响应式变量和非响应式变量的管理
     * view：负责页面
       即 view 与 controller 是解耦的，通过 binding 进行耦合
-5. 如果你执行的是步骤三那么你可以跳到步骤六如果你执行的步骤四那么你需要将lib->data和lib->shared文件进行复制并修改
-   data文件包含了所有网络请求需要的文件shared包含了所有常量封装的小控件和工具类
-6. 修复所有error 修复方法就是导包的问题建议全局修改包名
-7. 使用`get create page:demo`自己需要的新建页面需要适当修改参考其他页面文件进行修改 （ps 如果命令没用请使用`pub global activate get_cli`）
-8. 修改main方法相应文件参考main.dart
-9. 修改接口地址：Base地址data->api->api_constants.dart
-10. 修改接口方法：data->api->api_repository.dart
-11. 公共接口调用方法（可以自定义单独接口）data->api->base_provider.dart
-12. json解析 data->models 请求和返回需要分开写
-13. 修改图标 `flutter pub run flutter_launcher_icons_maker:main`
+5. 使用`get create page:demo`自己需要的新建页面需要适当修改参考其他页面文件进行修改 （ps 如果命令没用请使用`pub global activate get_cli`）
+6. 修改main方法相应文件参考main.dart
+7. 修改图标 `flutter pub run flutter_launcher_icons_maker:main`
 ## 代码规范
 1. 变量命名采用驼峰
 2. 公共组件或工具封装需要写下使用方法
@@ -44,11 +37,12 @@
 7. 可以参考文档 代码规范参考
    -[官方代码规范](https://dart.dev/guides/language/effective-dart)
    -[阿里项目规范](https://github.com/alibaba/flutter-go/blob/master/Flutter_Go%20%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83.md)
+8. 使用export将改常用目录下的所有包导入进来方便使用例如：export 'user_provider.dart';
+9. 创建页面时需要使用同一个controller的就不要使用get create page创建新页面
 ## GetX常用命令总结
 ```dart
 //生成翻译文件
 get generate locales assets/locales
-
 //新增页面
 get create page:demo
 //新增View
